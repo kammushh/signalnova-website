@@ -151,6 +151,7 @@
   const say = (t, cls) => { msg.textContent = t; msg.className = "msg " + (cls || ""); };
   const show = (n) => {
     $("step1").hidden = n !== 1; $("step2").hidden = n !== 2; $("done").hidden = n !== 3;
+    $("soon").hidden = n !== 4;
     stage = n; say("");
   };
   const okEmail = (e) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e);
@@ -176,6 +177,9 @@
     if (!name) { say("Enter your name.", "err"); invalid(nameEl, true); nameEl.focus(); return; }
     if (!okEmail(email)) { say("Enter a valid e-mail address.", "err"); invalid(emailEl, true); emailEl.focus(); return; }
     if (!$("consent").checked) { say("Tick the box to continue.", "err"); $("consent").focus(); return; }
+
+    // Demo build (static hosting, no backend): no code is sent, nothing is stored.
+    show(4); $("soonTitle").focus(); return;
 
     const btn = stage === 1 ? $("send") : $("resend");
     btn.disabled = true; say("Sending code…");
