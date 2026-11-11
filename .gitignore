@@ -1,0 +1,13 @@
+# Secrets (.env.example IS committed)
+.env
+
+# The whitepaper itself never goes into Git — copy it to the server (see docs/DEPLOYMENT.md)
+private/*
+!private/.gitkeep
+
+# Python
+venv/
+__pycache__/
+
+# Runtime
+logs/*.log

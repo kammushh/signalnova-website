@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SignalNova – Efficient wideband transmitters, 700 MHz to 8 GHz</title>
+<meta name="description" content="SignalNova digital RF transmitter chips: up to 60% DC-to-RF efficiency, 4 W peak output and 1 GHz bandwidth, tunable from 700 MHz to 8 GHz.">
+<meta name="theme-color" content="#F5F5FB" id="themeColor">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SignalNova – Transmitters that turn power into signal, not heat">
+<meta property="og:description" content="Up to 60% DC-to-RF efficiency, 4 W peak output and 1 GHz bandwidth, from 700 MHz to 8 GHz.">
+<meta property="og:image" content="/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/img/icon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/img/icon-180.png">
+<link rel="stylesheet" href="/css/site.css?v=3">
+<script src="/js/theme.js?v=3"></script>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap wide">
+    <a class="brand" href="#top" aria-label="SignalNova, back to top">
+      <img class="logo-light" src="/img/logo.png" alt="SignalNova" width="157" height="36">
+      <img class="logo-dark" src="/img/logo-dark.png" alt="SignalNova" width="157" height="36">
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#range">Tuning range</a>
+      <a href="#markets">Markets</a>
+      <a href="#benefits">Benefits</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-end">
+      <div class="theme">
+        <button class="icon-btn" type="button" id="themeBtn" aria-label="Theme" aria-haspopup="menu" aria-expanded="false" aria-controls="themeMenu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" stroke="none"/></svg>
+        </button>
+        <ul class="menu" id="themeMenu" role="menu" aria-label="Theme">
+          <li role="none"><button type="button" role="menuitemradio" data-theme-choice="signalnova" aria-checked="true"><span class="swatch sn"></span>SignalNova
+            <svg class="check-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button></li>
+          <li role="none"><button type="button" role="menuitemradio" data-theme-choice="light" aria-checked="false"><span class="swatch lt"></span>Light
+            <svg class="check-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button></li>
+          <li role="none"><button type="button" role="menuitemradio" data-theme-choice="dark" aria-checked="false"><span class="swatch dk"></span>Dark
+            <svg class="check-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button></li>
+        </ul>
+      </div>
+      <a class="btn small" href="#whitepaper">Whitepaper</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>Transmitters that turn power into signal, not heat.</h1>
+      <p class="sub">Digital RF transmitter chips with up to 60% DC-to-RF efficiency and up to 10x the output power of other CMOS transmitters.</p>
+      <div class="actions">
+        <a class="btn" href="#whitepaper">Get the whitepaper</a>
+        <a class="more" href="#range">Explore the tuning range</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="numbers" aria-label="Key figures">
+    <div class="wrap">
+      <dl>
+        <div><dt>60%</dt><dd>DC-to-RF efficiency, up to</dd></div>
+        <div><dt>4 W</dt><dd>peak output power</dd></div>
+        <div><dt>1 GHz</dt><dd>instantaneous bandwidth</dd></div>
+        <div><dt>0.7–8 GHz</dt><dd>center frequency range</dd></div>
+      </dl>
+      <p class="note">Measured on silicon. Output power is up to 10x that of other CMOS transmitters.</p>
+    </div>
+  </section>
+
+  <section class="stage" id="range" aria-labelledby="range-title">
+    <div class="wrap">
+      <h2 id="range-title">One chip. 0.7 to 8 GHz.</h2>
+      <p class="sub">A 1 GHz window you can place anywhere in the tuning range. Drag it, or pick a market to see where it fits.</p>
+
+      <fieldset class="seg-wrap">
+        <legend class="sr-only">Market</legend>
+        <div class="segmented">
+          <label><input type="radio" name="market" value="terrestrial" checked><span>Terrestrial</span></label>
+          <label><input type="radio" name="market" value="orbital"><span>Orbital</span></label>
+          <label><input type="radio" name="market" value="defense"><span>Defense</span></label>
+        </div>
+      </fieldset>
+
+      <div class="readout" aria-live="polite"><b id="ro-main">3.5 GHz</b><small id="ro-sub">Covers 3.0 to 4.0 GHz</small></div>
+
+      <div class="instrument">
+        <div class="axis" id="axis">
+          <div class="band"></div>
+          <div class="mkt" id="mkt"></div>
+          <div class="win" id="win" role="slider" tabindex="0" aria-label="Center frequency of the 1 GHz window"
+               aria-valuemin="1.2" aria-valuemax="7.5" aria-valuenow="3.5" aria-valuetext="3.5 gigahertz" aria-describedby="winHelp">
+            <span class="grip" aria-hidden="true"></span>
+            <span class="tip" id="tip" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg>
+              Drag to tune
+            </span>
+          </div>
+        </div>
+        <span class="sr-only" id="winHelp">Drag the window, or use the left and right arrow keys.</span>
+        <div class="ticks" aria-hidden="true" id="ticks"></div>
+        <p class="legend"><i></i><span id="mk-legend">Most relevant to terrestrial base stations</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="markets" aria-labelledby="mk-title">
+    <div class="wrap wide">
+      <div class="section-head">
+        <h2 id="mk-title">Built for your market.</h2>
+        <p class="sub">One transmitter design. Three very different power budgets.</p>
+      </div>
+      <div class="markets">
+        <article>
+          <p class="range">0.7 – 4.2 GHz</p>
+          <h3>Terrestrial base stations</h3>
+          <p>Macro and small-cell radios spend much of their power budget on the transmitter. Higher efficiency cuts energy cost and the cooling hardware around it.</p>
+          <ul>
+            <li>Lower power draw per radio</li>
+            <li>Smaller heat sinks and lighter enclosures</li>
+            <li>One transmitter design across several frequency plans</li>
+          </ul>
+          <button class="more" type="button" data-market="terrestrial">See it on the tuning range</button>
+        </article>
+        <article>
+          <p class="range">2 – 8 GHz</p>
+          <h3>Satellites and ground gateways</h3>
+          <p>In orbit every watt is generated, stored and cooled at a cost. Efficient transmitters reduce solar and thermal load, and on the ground they cut gateway power and cooling.</p>
+          <ul>
+            <li>Less supply power and heat per transmitted watt</li>
+            <li>Wide bandwidth for high-throughput links</li>
+            <li>Compact CMOS transmitters for large constellations</li>
+          </ul>
+          <button class="more" type="button" data-market="orbital">See it on the tuning range</button>
+        </article>
+        <article>
+          <p class="range">0.7 – 8 GHz</p>
+          <h3>Drones and portable communication</h3>
+          <p>Drones and portable radios live on battery power and tight size limits. Efficiency extends mission time, and wide tuning supports frequency agility.</p>
+          <ul>
+            <li>Longer battery life for the same output power</li>
+            <li>Small, light radios with less thermal design</li>
+            <li>Broad tuning range for frequency agility</li>
+          </ul>
+          <button class="more" type="button" data-market="defense">See it on the tuning range</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="benefits" aria-labelledby="why">
+    <div class="wrap wide">
+      <div class="section-head">
+        <h2 id="why">What you gain.</h2>
+        <p class="sub">Efficiency decides how much supply power becomes signal. The rest becomes heat you have to remove.</p>
+      </div>
+      <div class="tiles">
+        <div class="tile"><h3>Less heat. Less cooling.</h3><p>More of the supply power leaves as signal, so there is less heat to remove and less cooling hardware around the radio.</p></div>
+        <div class="tile"><h3>One chip. Many bands.</h3><p>A wide tuning range and 1 GHz of bandwidth let one transmitter design serve several frequency plans.</p></div>
+        <div class="tile"><h3>Power, in CMOS.</h3><p>High output power in a CMOS transmitter supports compact, high-volume designs.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="whitepaper" aria-labelledby="wp">
+    <div class="wrap">
+      <div class="center">
+        <h2 id="wp">Get the whitepaper.</h2>
+        <p class="sub">Measured results, on silicon. Confirm your e-mail address and download it right away.</p>
+      </div>
+
+      <form class="request" id="form" novalidate>
+        <div id="step1">
+          <div class="field-row"><label for="name">Full name</label>
+            <input id="name" type="text" autocomplete="name" maxlength="120" required></div>
+          <div class="field-row"><label for="email">Work e-mail</label>
+            <input id="email" type="email" autocomplete="email" inputmode="email" maxlength="254" required></div>
+          <div class="hp" aria-hidden="true"><label>Leave this empty<input id="website" type="text" tabindex="-1" autocomplete="off"></label></div>
+          <label class="check"><input id="consent" type="checkbox">
+            <span>I agree that SignalNova may e-mail me the whitepaper and contact me about it, as described in the <a href="/privacy">privacy notice</a>.</span></label>
+          <button class="btn block" type="submit" id="send">Continue</button>
+        </div>
+
+        <div id="step2" hidden>
+          <p class="step-title">Enter the 6-digit code we sent to<br><strong id="sentTo"></strong></p>
+          <div class="field-row"><label class="sr-only" for="code">Verification code</label>
+            <input id="code" class="code" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" pattern="[0-9]*"></div>
+          <button class="btn block" type="submit" id="verify">Verify</button>
+          <div class="links"><button class="more" type="button" id="resend">Send a new code</button>
+            <button class="more" type="button" id="change">Use another e-mail</button></div>
+        </div>
+
+        <div id="done" class="done" hidden>
+          <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+          <h3 tabindex="-1" id="doneTitle">You're all set.</h3>
+          <p>We also sent the download link to <strong id="doneTo"></strong>. It works for <span id="linkHours">72</span> hours.</p>
+          <a class="btn block" id="dl" href="#">Download the whitepaper (PDF)</a>
+        </div>
+
+        <p class="msg" id="msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <section class="section alt" id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="section-head"><h2 id="faq-title">Questions.</h2></div>
+      <div class="faq">
+        <details><summary>Why do you ask me to confirm my e-mail address?</summary>
+          <p>So we know the address is real and belongs to you. The code is valid for 15 minutes and only works once.</p></details>
+        <details><summary>I did not receive a code.</summary>
+          <p>It usually arrives within a minute. Check your spam or junk folder, and that the address is spelled correctly. After 30 seconds you can ask for a new code.</p></details>
+        <details><summary>What do you do with my details?</summary>
+          <p>We use your name and e-mail address only to send you the whitepaper and to follow up about it. We do not sell or share them. Read the <a href="/privacy">privacy notice</a> for details.</p></details>
+        <details><summary>My download link has expired.</summary>
+          <p>Request the whitepaper again with the same e-mail address and you get a fresh link.</p></details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap wide">
+    <p>Copyright © <span id="year">2026</span> SignalNova B.V. All rights reserved.</p>
+    <!-- TODO before launch: registered address, KvK number and contact e-mail. -->
+    <nav aria-label="Footer"><a href="/privacy">Privacy notice</a><a href="#whitepaper">Whitepaper</a></nav>
+  </div>
+</footer>
+
+<script src="/js/site.js?v=3" defer></script>
+</body>
+</html>

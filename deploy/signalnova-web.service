@@ -1,0 +1,19 @@
+[Unit]
+Description=SignalNova website (FastAPI)
+After=network-online.target
+Wants=network-online.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/signalnova-website
+EnvironmentFile=/home/ubuntu/signalnova-website/.env
+ExecStart=/home/ubuntu/signalnova-website/venv/bin/uvicorn app:app --host 127.0.0.1 --port 8001 --proxy-headers
+Restart=always
+RestartSec=10
+StandardOutput=append:/home/ubuntu/signalnova-website/logs/web.log
+StandardError=append:/home/ubuntu/signalnova-website/logs/web.log
+
+[Install]
+WantedBy=multi-user.target
