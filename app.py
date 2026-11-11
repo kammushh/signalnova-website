@@ -149,6 +149,7 @@ def index():
 
 
 @app.api_route("/privacy", methods=["GET", "HEAD"], include_in_schema=False)
+@app.api_route("/privacy.html", methods=["GET", "HEAD"], include_in_schema=False)
 def privacy():
     return FileResponse(ROOT / "privacy.html")
 
